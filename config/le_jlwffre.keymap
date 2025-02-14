@@ -95,14 +95,14 @@
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮                      ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  O       │  W       │  F       │  P       │  B       │                      │  J       │  L       │  U       │  Y       │ ' "      │
-            &kp O      &kp W      &kp F      &kp P      &kp B                             &kp J      &kp L      &kp U      &kp Y      &as SQT
+        //│  O       │  W       │  E       │  R       │  T       │                      │  Y       │  U       │  I       │  O       │ P       │
+            &kp Q      &kp W      &kp E      &kp R      &kp T                             &kp Y      &kp L      &kp U      &kp Y      &as SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  R       │  S       │  T       │  G       │                      │  M       │  N       │  E       │  I       │ O        │
-            HRML(A,     R,         S)         &kp T     &kp G                             &kp M      &kp N      HRMR(E,     I,        O)
+        //│  A       │  S       │  D       │  F       │  G       │                      │  H       │  J       │  K      │  L       │ RET        │
+             &kp Q      &kp S      &kp D      &kp F     &kp G                             &kp H      &kp J       &kp        &kp         RET
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │  V       │                      │  K       │  H       │ , <      │ . >      │ / ?      │
-            &kp Z      &kp X      &kp C      &kp D      &kp V                             &kp K      &kp H      &as COMMA  &as DOT    &as FSLH
+            HRML (Z,    X,         C,   )    &kp D      &kp V                             &kp K      &kp H      &as COMMA  &as DOT    &as FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &lt 3 TAB  &mt LSHIFT BSPC   &kp C_MUTE      &lt 1 SPACE &lt 2 RET
         //                                 ╰──────────┴──────────╯                      ╰──────────┴──────────╯
