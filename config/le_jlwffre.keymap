@@ -98,11 +98,11 @@
         //│  O       │  W       │  E       │  R       │  T       │                      │  Y       │  U       │  I       │  O       │ P       │
             &kp Q      &kp W      &kp E      &kp R      &kp T                             &kp Y      &kp L      &kp U      &kp Y      &as SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │                      │  H       │  J       │  K      │  L       │ RET        │
-             &kp Q      &kp S      &kp D      &kp F     &kp G                             &kp H      &kp J       &kp        &kp         RET
+        //│  A       │  S       │  D       │  T       │  G       │                      │  M       │  N       │  E       │  I       │ O        │
+            HRML(A,     S,         D)         &kp T     &kp G                             &kp M      &kp N      HRMR(E,     I,        O)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │  V       │                      │  K       │  H       │ , <      │ . >      │ / ?      │
-            HRML (Z,    X,         C)          &kp D      &kp V                             &kp K      &kp H      &as COMMA  &as DOT    &as FSLH
+            &kp Z      &kp X      &kp C      &kp D      &kp V                             &kp K      &kp H      &as COMMA  &as DOT    &as FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &lt 3 TAB  &mt LSHIFT BSPC   &kp C_MUTE      &lt 1 SPACE &lt 2 RET
         //                                 ╰──────────┴──────────╯                      ╰──────────┴──────────╯
