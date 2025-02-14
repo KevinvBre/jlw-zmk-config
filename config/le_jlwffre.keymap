@@ -104,7 +104,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │                      │  K       │  H       │ , <      │ . >      │ / ?      │
             HRML(Z,X,C              )      &kp D      &kp V                             &kp K      &kp H      &as COMMA  &as DOT    &as FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp BSPC &kp LALT  &mt LGUI   &kp C_MUTE      &lt 1 SPACE &lt 2 RET
+                                            &lt 3 TAB  &mt LSHIFT BSPC   &kp C_MUTE      &lt 1 SPACE &lt 2 RET
         //                                 ╰──────────┴──────────╯                      ╰──────────┴──────────╯
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
