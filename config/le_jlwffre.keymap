@@ -99,7 +99,7 @@
             &kp Q      &kp W      &kp E      &kp R      &kp T                             &kp Y      &kp L      &kp U      &kp Y      &as SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  T       │  G       │                      │  M       │  N       │  E       │  I       │ O        │
-            &kp A      &kp S       &kp D      &kp T     &kp G                         &kp M      &kp N      HRMR(E,     I,        O)
+            &kp A      &kp S       &kp D      &kp T     &kp G                              &kp M      &kp N      &kp E      &kp I      &kp O      
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  v       │  B       │                      │  K       │  H       │ , <      │ . >      │ / ?      │
             HLMR(Z,     X,        C)          &kp v      &kp B                             &kp K      &kp H      &as COMMA  &as DOT    &as FSLH
