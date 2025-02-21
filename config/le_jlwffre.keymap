@@ -73,6 +73,18 @@
               <&macro_param_1to1 &macro_tap &kp MACRO_PLACEHOLDER>,
               <&macro_release &kp LSHFT>;
         };
+        hyper: macro_shifted_kp {
+            #binding-cells = <1>;
+            compatible = "zmk,behavior-macro-one-param";
+            bindings =
+              <&macro_press &kp LSHFT>,
+              <&macro_press &kp LCtrl>,
+              <&macro_release &kp LGUI>;
+              <&macro_param_1to1 &macro_tap &kp MACRO_PLACEHOLDER>,
+              <&macro_release &kp LGUI>;
+              <&macro_release &kp LCtrl>;
+              <&macro_release &kp LSHFT>;
+        };
         as: autoshift {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -108,13 +120,13 @@
         1 {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮          ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &kp ESC     &none      &as N7     &as N8     &as N9                  &as BSLH   &none      &kp UP     &none     &none
+            &ht ESC &hyper 4     &none      &as N7     &as N8     &as N9                  &as BSLH   &none      &kp UP     &none     &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &as TAB     &none     &as N4     &as N5     &as N6                  &none      &kp LEFT    &kp DOWN   &kp RIGHT &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┼──────────┼──────────┤       
-            &kp LSFT    &as N0      &as N1     &as N2     &as N3                 &as MINUS  &as EQUAL     &trans     &trans     &trans
+            &kp LSFT    &none      &as N1     &as N2     &as N3                 &as MINUS  &as EQUAL     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &ht D BSPC  &kp LGUI               &none    &trans     &trans
+                                             &ht D BSPC  &as N0               &none    &trans     &trans
         //                                 ╰──────────┴──────────╯          ╰──────────┴──────────╯
             >;            
         };
