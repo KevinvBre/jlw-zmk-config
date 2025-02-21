@@ -29,7 +29,14 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
-      
+        as_ht: autoshift_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&shifted>, <&kp>;
+            flavor = "tap-preferred";
+        };
+
         combos {
             compatible = "zmk,combos";
             combo_esc {
@@ -57,20 +64,43 @@
         };
     };
 
-   
+    macros {
+        shifted: macro_shifted_kp {
+            #binding-cells = <1>;
+            compatible = "zmk,behavior-macro-one-param";
+            bindings =
+              <&macro_press &kp LSHFT>,
+              <&macro_param_1to1 &macro_tap &kp MACRO_PLACEHOLDER>,
+              <&macro_release &kp LSHFT>;
+        };
+        as: autoshift {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+              <&macro_press>,
+              <&macro_param_1to1>,
+              <&macro_param_1to2>,
+              <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+              <&macro_pause_for_release>,
+              <&macro_release>,
+              <&macro_param_1to1>,
+              <&macro_param_1to2>,
+              <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮                      ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &kp Q      &kp W      &kp E      &kp R      &kp T                             &kp Y      &kp L      &kp U      &kp Y      &kp P
+            &kp Q      &kp W      &kp E      &kp R      &kp T                             &kp Y      &kp L      &kp U      &kp Y      &as SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp A      &kp S         &kp D    &kp T     &kp G                              &kp H      &kp J      &kp K      &kp I     &kp RET     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            HRML(Z,X,C              )         &kp D      &kp V                             &kp K      &kp H      &as COMMA  &as DOT    &as FSLH
+            HRML(Z,X,C              )      &kp D      &kp V                             &kp K      &kp H      &as COMMA  &as DOT    &as FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp D     &kp D            &kp D               &kp D     &kp D
+                                            &kp D       &kp D               &kp D           &kp D       &kp D
         //                                 ╰──────────┴──────────╯                      ╰──────────┴──────────╯
             >;            
         };
@@ -82,7 +112,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &as N1     &as N2     &as N3     &as N4     &as N5            &as N6     &as N7     &as N8     &as N9     &as N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
-
+        //│          │          │          │          │          │      │          │          │          │          │          │
             &none      &none      &none      &none      &none             &none      &none      &trans     &trans     &as SEMI
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans    &trans  &trans     &trans
