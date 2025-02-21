@@ -43,24 +43,7 @@
                 timeout-ms = <50>;
                 key-positions = <0 1>;
                 bindings = <&kp ESC>;
-            };
-            combo_del {
-                timeout-ms = <50>;
-                key-positions = <8 9>;
-                bindings = <&kp DEL>;
-            };
-            combo_reset {
-                timeout-ms = <50>;
-                key-positions = <0 9>;
-                layers = <2>;
-                bindings = <&sys_reset>;
-            };
-            combo_boot {
-                timeout-ms = <50>;
-                key-positions = <5 20>;
-                layers = <2>;
-                bindings = <&bootloader>;
-            };
+            };            
         };
     };
 
@@ -117,7 +100,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
             HRML(Z,X,C              )      &kp D      &kp V                                &kp K      &kp H      &as COMMA  &as DOT    &as FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp D       &lm 1 LGUI            &none            &lt 2 SPACE   &bootloader
+                                            &kp D       &lm 1 LGUI      &none        &lt 2 SPACE   &bootloader
         //                                 ╰──────────┴──────────╯                      ╰──────────┴──────────╯
             >;            
         };
@@ -125,14 +108,13 @@
         1 {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮      ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &as N1     &as N2     &as N3     &as N4     &as N5             &as BSLH   &as MINUS  &as EQUAL  &as LBKT   &as RBKT
+            &kp ESC     &none     &as N7     &as N8     &as N9             &as BSLH   &none       &kp UP     &none     &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &as N6     &as N7     &as N8     &as N9     &as N0            &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │      │          │          │          │          │          │
-            &none      &none      &none      &none      &none             &none      &none      &trans     &trans     &trans
+            &as TAB     &none     &as N4     &as N5     &as N6             &none      &kp LEFT    &kp DOWN   &kp RIGHT &kp ENTER
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤       
+            &kp LSFT    &none      &as N1     &as N2     &as N3             &as MINUS  &as EQUAL     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans    &none  &trans     &trans
+                                             &trans     &trans    &none    &trans     &trans
         //                                 ╰──────────┴──────────╯      ╰──────────┴──────────╯
             >;            
         };
@@ -148,7 +130,7 @@
         //│          │          │          │          │          │      │          │          │          │          │          │
             &none      &none      &none      &none      &none             &as MINUS  &as EQUAL     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans    &none  &trans     &trans
+                                             &trans     &LGUI    &none  &trans     &trans
         //                                 ╰──────────┴──────────╯      ╰──────────┴──────────╯
             >;            
         };
