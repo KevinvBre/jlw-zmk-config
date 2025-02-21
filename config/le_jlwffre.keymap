@@ -130,7 +130,7 @@
         //│          │          │          │          │          │      │          │          │          │          │          │
             &none      &none      &none      &none      &none             &as MINUS  &as EQUAL     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &LGUI    &none  &trans     &trans
+                                             &trans     &kp LGUI    &none  &trans     &trans
         //                                 ╰──────────┴──────────╯      ╰──────────┴──────────╯
             >;            
         };
