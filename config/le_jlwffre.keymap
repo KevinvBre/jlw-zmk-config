@@ -73,7 +73,7 @@
               <&macro_param_1to1 &macro_tap &kp MACRO_PLACEHOLDER>,
               <&macro_release &kp LSHFT>;
         };
-        hyper: macro_shifted_kp {
+        hyper: macro_hypereded_kp {
             #binding-cells = <1>;
             compatible = "zmk,behavior-macro-one-param";
             bindings =
