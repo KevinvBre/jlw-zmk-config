@@ -123,9 +123,9 @@
         2 {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮      ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &kp LC(LG(LS(N4)))     &kp W     &as Tab     &as R     &as T             &as BSLH   &none      &kp UP     &none     &none
+            &kp LC(LG(LS(N4)))     &kp W     &as TAB     &as R     &as T             &as BSLH   &none      &kp UP     &none     &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &as A     &as S    &as Tab     &as N5     &as N6               &none      &kp LEFT    &kp DOWN   &kp RIGHT &none
+            &as A     &as S    &as TAB     &as N5     &as N6               &none      &kp LEFT    &kp DOWN   &kp RIGHT &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │      │          │          │          │          │          │
             &as Z    &as X    &as C     &as V     &as B             &as MINUS  &as EQUAL     &trans     &trans     &trans
