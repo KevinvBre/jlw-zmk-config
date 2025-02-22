@@ -73,7 +73,18 @@
               <&macro_param_1to1 &macro_tap &kp MACRO_PLACEHOLDER>,
               <&macro_release &kp LSHFT>;
         };   
-         
+        screenshot: screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LGUI>
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap &kp N4>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp LSHFT>
+                ;     
         as: autoshift {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -109,7 +120,7 @@
         1 {
             bindings = <
         //╭──────────           ┬──────────┬──────────┬──────────┬──────────╮          ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &kp LC(LG(LS(N4)))      &none      &as N7     &as N8     &as N9                  &as BSLH   &none      &kp UP     &none     &none
+            &ht ESC &screenshot      &none      &as N7     &as N8     &as N9                  &as BSLH   &none      &kp UP     &none     &none
         //├──────────           ┼──────────┼──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &as TAB                 &none     &as N4     &as N5     &as N6                  &none      &kp LEFT    &kp DOWN   &kp RIGHT &kp ENTER
         //├──────────           ┼──────────┼──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┼──────────┼──────────┤       
