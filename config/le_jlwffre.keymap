@@ -72,20 +72,7 @@
               <&macro_press &kp LSHFT>,
               <&macro_param_1to1 &macro_tap &kp MACRO_PLACEHOLDER>,
               <&macro_release &kp LSHFT>;
-        };   
-        screenshot: screenshot {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_press &kp LGUI>
-                , <&macro_press &kp LCTRL>
-                , <&macro_tap &kp N4>
-                , <&macro_release &kp LCTRL>
-                , <&macro_release &kp LGUI>
-                , <&macro_release &kp LSHFT>
-                ;
-        }     
+        };              
         as: autoshift {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -120,15 +107,15 @@
 
         1 {
             bindings = <
-        //╭──────────           ┬──────────┬──────────┬──────────┬──────────╮          ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &screenshot      &none      &as N7     &as N8     &as N9                  &as BSLH   &none      &kp UP     &none     &none
-        //├──────────           ┼──────────┼──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &as TAB                 &none     &as N4     &as N5     &as N6                  &none      &kp LEFT    &kp DOWN   &kp RIGHT &kp ENTER
-        //├──────────           ┼──────────┼──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┼──────────┼──────────┤       
-            &kp LSFT                &none      &as N1     &as N2     &as N3                 &as MINUS  &as EQUAL     &trans     &trans     &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &ht LALT BSPC  &as N0               &none    &trans     &trans
-        //                                 ╰──────────┴──────────╯          ╰──────────┴──────────╯
+        //╭──────────           ┬──────────┬            ──────────┬──────────┬──────────╮          ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+            &kp ESC                 &none                  &as N7     &as N8     &as N9                  &as BSLH   &none      &kp UP     &none     &none
+        //├──────────           ┼──────────┼            ──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┼──────────┼──────────┤
+            &as TAB                 &none                   &as N4     &as N5     &as N6                  &none      &kp LEFT    &kp DOWN   &kp RIGHT &kp ENTER
+        //├──────────           ┼──────────┼            ──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┼──────────┼──────────┤       
+            &kp LSFT                &kp LC(LG(LS(N4)))      &as N1     &as N2     &as N3                 &as MINUS  &as EQUAL     &trans     &trans     &trans
+        //╰──────────┴          ──────────┴             ──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                                                    &ht LALT BSPC  &as N0               &none    &trans     &trans
+        //                                                          ╰──────────┴──────────╯          ╰──────────┴──────────╯
             >;            
         };
 
@@ -136,7 +123,7 @@
         2 {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮      ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &kp LC(LG(LS(N4)))     &kp W     &as E     &as R     &as T             &as BSLH   &none      &kp UP     &none     &none
+            &kp ESC     &kp W     &as E     &as R     &as T             &as BSLH   &none      &kp UP     &none     &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &as TAB     &none    &as N4     &as N5     &as N6               &none      &kp LEFT    &kp DOWN   &kp RIGHT &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
