@@ -80,7 +80,7 @@
               <&macro_press &kp LSHFT>,
               <&macro_press &kp LCTRL>,
               <&macro_release &kp LGUI>;
-              <&macro_param_1to1 &macro_tap &kp MACRO_PLACEHOLDER>,
+              <&kp MACRO_PLACEHOLDER>,
               <&macro_release &kp LGUI>;
               <&macro_release &kp LCTRL>;
               <&macro_release &kp LSHFT>;
