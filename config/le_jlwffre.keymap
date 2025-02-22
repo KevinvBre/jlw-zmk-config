@@ -72,19 +72,7 @@
               <&macro_press &kp LSHFT>,
               <&macro_param_1to1 &macro_tap &kp MACRO_PLACEHOLDER>,
               <&macro_release &kp LSHFT>;
-        };
-        hyper: macro_hypereded_kp {
-            #binding-cells = <1>;
-            compatible = "zmk,behavior-macro-one-param";
-            bindings =
-              <&macro_press &kp LSHFT>,
-              <&macro_press &kp LCTRL>,
-              <&macro_release &kp LGUI>;
-              <&kp MACRO_PLACEHOLDER>,
-              <&macro_release &kp LGUI>;
-              <&macro_release &kp LCTRL>;
-              <&macro_release &kp LSHFT>;
-        };
+        };       
         as: autoshift {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -119,12 +107,12 @@
 
         1 {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮          ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &ht ESC &hyper 4     &none      &as N7     &as N8     &as N9                  &as BSLH   &none      &kp UP     &none     &none
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &as TAB     &none     &as N4     &as N5     &as N6                  &none      &kp LEFT    &kp DOWN   &kp RIGHT &kp ENTER
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┼──────────┼──────────┤       
-            &kp LSFT    &none      &as N1     &as N2     &as N3                 &as MINUS  &as EQUAL     &trans     &trans     &trans
+        //╭──────────           ┬──────────┬──────────┬──────────┬──────────╮          ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+            &ht ESC &kp LC LG LS 4     &none      &as N7     &as N8     &as N9                  &as BSLH   &none      &kp UP     &none     &none
+        //├──────────           ┼──────────┼──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┼──────────┼──────────┤
+            &as TAB                 &none     &as N4     &as N5     &as N6                  &none      &kp LEFT    &kp DOWN   &kp RIGHT &kp ENTER
+        //├──────────           ┼──────────┼──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┼──────────┼──────────┤       
+            &kp LSFT                &none      &as N1     &as N2     &as N3                 &as MINUS  &as EQUAL     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &ht D BSPC  &as N0               &none    &trans     &trans
         //                                 ╰──────────┴──────────╯          ╰──────────┴──────────╯
