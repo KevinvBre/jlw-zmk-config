@@ -49,7 +49,7 @@
 
     macros {
          lmnreset: lm {
-            compatible = "zmk,behavior-macro-two-param";
+            compatible = "zmk,behavior-macro-one-param";
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <2>;
@@ -117,7 +117,7 @@
         1 {
             bindings = <
         //╭──────────           ┬──────────┬            ──────────┬──────────┬──────────╮          ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &lmnreset ESC                 &none                  &as N7     &as N8     &as N9                  &as BSLH   &none      &kp UP     &none     &none
+            &kp ESC                 &none                  &as N7     &as N8     &as N9                  &as BSLH   &none      &kp UP     &none     &none
         //├──────────           ┼──────────┼            ──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &as TAB                 &none                   &as N4     &as N5     &as N6                  &none      &kp LEFT    &kp DOWN   &kp RIGHT &kp ENTER
         //├──────────           ┼──────────┼            ──────────┼──────────┼──────────┤          ├──────────┼──────────┼──────────┼──────────┼──────────┤       
