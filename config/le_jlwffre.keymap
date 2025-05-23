@@ -160,9 +160,9 @@
             &as N6     &as N7    &as N8      &as N9     &as 0                           &as DQT      &kp LEFT  &kp DOWN    &kp RIGHT &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                  ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │                  │          │          │          │          │          │
-            &kp LSFT    &as X       &as C     &as V     &as B                           &as MINUS  &as EQUAL  &trans     &trans     &trans
+            &kp LSFT    &kp X       &kp C     &kp V     &kp B                           &as MINUS  &as EQUAL  &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                  ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp BSPC   &kp LGUI                &none  &trans     &trans
+                                             &kp BSPC   &kp LGUI                        &none    &bootloader
         //                                 ╰──────────┴──────────╯                  ╰──────────┴──────────╯
             >;            
         };
