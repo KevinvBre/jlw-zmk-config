@@ -59,12 +59,12 @@
 
         combos {
             compatible = "zmk,combos";
-            LBKT {
+            test1 {
                 timeout-ms = <50>;
                 key-positions = <1 2>;
                 bindings = <&as LBKT>;
             };     
-            RBKT {
+            test2 {
                 timeout-ms = <50>;
                 key-positions = <11 12>;
                 bindings = <&as RBKT>;
