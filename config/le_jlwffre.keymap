@@ -61,22 +61,26 @@
             compatible = "zmk,combos";
             test1 {
                 timeout-ms = <50>;
+                require-prior-idle-ms = <125>;
                 key-positions = <1 2>;
                 bindings = <&as LBKT>;
             }; 
             test2 {
                 timeout-ms = <50>;
+                require-prior-idle-ms = <125>;
                 key-positions = <2 3>;
                 bindings = <&kp LS(RET)>;
             };     
             test3 {
                 timeout-ms = <50>;
+                require-prior-idle-ms = <125>;
                 key-positions = <11 12>;
                 bindings = <&as RBKT>;
             };      
 
             test4 {
                 timeout-ms = <50>;
+                require-prior-idle-ms = <125>;
                 key-positions = <12 13>;
                 bindings = <&kp RET>;
             };      
@@ -84,6 +88,7 @@
 
             test5 {
                 timeout-ms = <50>;
+                require-prior-idle-ms = <125>;
                 key-positions = <21 22>;
                 bindings = <&as RBKT>;
             };       
@@ -162,7 +167,7 @@
         1 {
             bindings = <
         //╭─────────────────────┬─────────────────────┬───────────────────┬───────────┬──────────╮              ╭──────────┬──────────┬──────────┬───────────────────────────┬─────────────────────────╮
-            &htskip LC(LG(LS(N4))) ESC      &b_ht A W      &lm_skip_mod E    &trans     &trans                     &trans    &trans      &trans     &lm_skip_mod  C_VOL_DN     &lm_skip_mod C_VOL_UP
+            &htskip LC(LG(LS(N4))) ESC      &b_ht A W      &lm_skip_mod TAB    &trans     &trans                     &trans    &trans      &trans     &lm_skip_mod  C_VOL_DN     &lm_skip_mod C_VOL_UP
         //├─────────────────────┼───────────────-─────┼───────────────────┼───────────┼──────────┤              ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &trans                         &trans           &as TAB          &trans       &trans                   &trans    &trans      &trans    &trans      &trans
         //├─────────────────────┼───────────────-─────┼───────────────────┼───────────┼──────────┤              ├──────────┼──────────┼──────────┼──────────┼──────────┤       
