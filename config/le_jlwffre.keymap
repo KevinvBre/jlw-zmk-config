@@ -30,7 +30,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <220>;
             require-prior-idle-ms = <125>;
-            bindings = <&lm_skip_mod>, <&kp>;
+            bindings = <&kp>, <&lm_skip_mod>;
         };
 
         mt: mod_tap {
