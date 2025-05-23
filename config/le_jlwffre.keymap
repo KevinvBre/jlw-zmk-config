@@ -67,7 +67,7 @@
             test2 {
                 timeout-ms = <50>;
                 key-positions = <2 3>;
-                bindings = <&KP LS(RET)>;
+                bindings = <&kp LS(RET)>;
             };     
             test3 {
                 timeout-ms = <50>;
