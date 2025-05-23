@@ -59,6 +59,14 @@
 
         combos {
             compatible = "zmk,combos";
+
+            test0 {
+                timeout-ms = <50>;
+                require-prior-idle-ms = <250>;
+                key-positions = <0 1>;
+                bindings = <&soft_off>;
+            }; 
+
             test1 {
                 timeout-ms = <50>;
                 require-prior-idle-ms = <250>;
