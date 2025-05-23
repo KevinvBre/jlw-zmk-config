@@ -69,16 +69,6 @@
 
     macros {
 
-        skip_mod_screenshot: lm_skip_mod {
-            #binding-cells = <1>;
-            compatible = "zmk,behavior-macro-one-param";
-            bindings =            
-            <&macro_release &kp LGUI>,  
-            <&macro_param_1to1>,          
-            <&macro_tap &kp MACRO_PLACEHOLDER>,
-            <&macro_press &kp LGUI>;
-        };
-
         lm_skip_mod: lm_skip_mod {
             #binding-cells = <1>;
             compatible = "zmk,behavior-macro-one-param";
