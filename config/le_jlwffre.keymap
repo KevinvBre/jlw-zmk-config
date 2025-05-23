@@ -54,8 +54,7 @@
             bindings =
             <&macro_param_1to1>,
             <&macro_release &kp LGUI>,            
-            <&macro_press &kp MACRO_PLACEHOLDER>,
-            <&macro_press &kp LGUI>;
+            <&macro_press &kp MACRO_PLACEHOLDER>;
         };
 
         lm: lm {
