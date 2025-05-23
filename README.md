@@ -1,3 +1,15 @@
+# Personal notes:
+
+
+
+
+
+
+
+
+
+
+
 # jlw's ZMK User Config Repo
 
 ## Instructions
