@@ -55,7 +55,7 @@
             <&macro_param_1to1>,
             <&macro_release &kp LGUI>,            
             <&macro_press &kp MACRO_PLACEHOLDER>,
-            <&macro_press &lm 1 LGUI>;
+            <&macro_press &kp LGUI>;
         };
 
         lm: lm {
