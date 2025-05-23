@@ -129,9 +129,9 @@
         //╭──────────           ┬──────────┬    ──────────┬         ──────────                  ┬──────────╮         ╭──────────┬──────────┬──────────┬──────────┬──────────╮
             &lm_skip_mod ESC        &b_ht A W      &lm_skip_mod E     &trans                     &trans                 &trans    &trans      &trans     &lm_skip_mod  C_VOL_DN   &lm_skip_mod C_VOL_UP
         //├──────────           ┼──────────┼    ──────────┼          ─────────                  ─┼──────────┤        ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &as TAB                 &none           &as TAB          &as N5                       &as N6                  &none      &kp LEFT    &kp DOWN   &kp RIGHT &kp ENTER
+            &as TAB                 &none           &as TAB          &trans                       &trans                 &trans    &trans      &trans    &trans      &trans
         //├──────────           ┼──────────┼    ──────────┼        ──────────┼                  ──────────┤          ├──────────┼──────────┼──────────┼──────────┼──────────┤       
-            &kp LSFT                &none           &as N1           &as N2                       &as N3                 &as MINUS  &as EQUAL     &trans     &trans     &trans
+            &kp LSFT                &trans           &trans          &trans                       &trans                 &trans    &trans      &trans    &trans      &trans
         //╰──────────┴          ──────────┴     ──────────┼        ──────────┼                 ──────────┤          ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                                      &ht LALT BSPC   &as N0     &none                   &trans     &trans
         //                                                         ╰──────────┴──────────╯                           ╰──────────┴──────────╯
