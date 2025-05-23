@@ -22,6 +22,17 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
+
+        htskip: hold_tap_skip {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <220>;
+            require-prior-idle-ms = <125>;
+            bindings = <&lm_skip_mod>, <&kp>;
+        };
+
         mt: mod_tap {
             flavor = "tap-preferred";
             #binding-cells = <2>;
@@ -57,6 +68,17 @@
     };
 
     macros {
+
+        skip_mod_screenshot: lm_skip_mod {
+            #binding-cells = <1>;
+            compatible = "zmk,behavior-macro-one-param";
+            bindings =            
+            <&macro_release &kp LGUI>,  
+            <&macro_param_1to1>,          
+            <&macro_tap &kp MACRO_PLACEHOLDER>,
+            <&macro_press &kp LGUI>;
+        };
+
         lm_skip_mod: lm_skip_mod {
             #binding-cells = <1>;
             compatible = "zmk,behavior-macro-one-param";
@@ -141,8 +163,9 @@
 
         2 {
             bindings = <
+        //&kp LC(LG(LS(N4))) 
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮                  ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &kp LC(LG(LS(N4)))     &kp W     &as TAB     &as R     &as T                &as BSLH   &none      &kp UP     &none     &studio_unlock
+            &htskip ESC LC(LG(LS(N4)))     &kp W     &as TAB     &as R     &as T                &as BSLH   &none      &kp UP     &none     &studio_unlock
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                  ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &as A     &as S    &as TAB     &as N5     &as N6                           &none      &kp LEFT    &kp DOWN   &kp RIGHT &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                  ├──────────┼──────────┼──────────┼──────────┼──────────┤
