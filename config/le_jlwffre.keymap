@@ -16,13 +16,14 @@
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <220>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
         mt: mod_tap {
+            flavor = "tap-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <220>;
@@ -34,6 +35,14 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             bindings = <&shifted>, <&kp>;
+            flavor = "tap-preferred";
+        };
+
+        b_ht: blocked_holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&>, <&kp>;
             flavor = "tap-preferred";
         };
 
