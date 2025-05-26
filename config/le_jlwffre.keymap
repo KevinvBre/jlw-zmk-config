@@ -79,7 +79,6 @@
         };
 
 
-
         mt: mod_tap {
             flavor = "tap-preferred";
             #binding-cells = <2>;
@@ -104,10 +103,28 @@
             flavor = "tap-preferred";
         };
 
+
+        ht_mt: ht_mt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <220>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&lmdub>;
+        };
+
         
     };
 
     macros {
+
+        lmdub: lmdub {
+            #binding-cells = <1>;
+            compatible = "zmk,behavior-macro-one-param";
+            bindings =             
+            <&macro_tap &lm 1 LGUI>;
+        };
 
         lm_skip_mod: lm_skip_mod {
             #binding-cells = <1>;
@@ -169,7 +186,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp A      &kp S       &kp D      &kp F      &kp G                                        &kp H      &kp J      &kp K      &kp L     &kp ENTER     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &mt LSHIFT Z  &mt LALT X  &mt LGUI C      &kp V      &kp B                                        &kp N      &kp M      &as COMMA  &as DOT    &mt LSHIFT FSLH
+            &mt LSHIFT Z  &mt LALT X  &ht_mt C      &kp V      &kp B                                        &kp N      &kp M      &as COMMA  &as DOT    &mt LSHIFT FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &ht LALT BSPC    &lm 1 LGUI          &trans              &lt 2 SPACE   &bootloader
         //                                 ╰──────────┴──────────╯                                 ╰──────────┴──────────╯
