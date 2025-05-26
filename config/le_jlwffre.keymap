@@ -13,60 +13,6 @@
 
 / {
     behaviors {
-        ht: hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <220>;
-            require-prior-idle-ms = <125>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        htskip: hold_tap_skip {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <220>;
-            require-prior-idle-ms = <125>;
-            bindings = <&kp>, <&lm_skip_mod>;
-        };
-
-        ht_mt: ht_mt {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <220>;
-            require-prior-idle-ms = <125>;
-            bindings = <&kp>, <&lm>;
-        };
-
-        mt: mod_tap {
-            flavor = "tap-preferred";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <220>;
-            require-prior-idle-ms = <125>;
-            bindings = <&kp>, <&kp>;
-        };
-        as_ht: autoshift_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            bindings = <&shifted>, <&kp>;
-            flavor = "tap-preferred";
-        };
-
-        b_ht: blocked_holdtap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&kp>;
-            flavor = "tap-preferred";
-        };
-
         combos {
             compatible = "zmk,combos";
 
@@ -110,6 +56,55 @@
                 bindings = <&kp LC(C) >;
             };       
         };
+
+
+        ht: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <220>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        htskip: hold_tap_skip {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <220>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&lm_skip_mod>;
+        };
+
+
+
+        mt: mod_tap {
+            flavor = "tap-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <220>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
+        as_ht: autoshift_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&shifted>, <&kp>;
+            flavor = "tap-preferred";
+        };
+
+        b_ht: blocked_holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&kp>;
+            flavor = "tap-preferred";
+        };
+
+        
     };
 
     macros {
@@ -174,7 +169,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp A      &kp S       &kp D      &kp F      &kp G                                        &kp H      &kp J      &kp K      &kp L     &kp ENTER     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &mt LSHIFT Z  &mt LALT X  &ht_mt C 1 LGUI      &kp V      &kp B                                        &kp N      &kp M      &as COMMA  &as DOT    &mt LSHIFT FSLH
+            &mt LSHIFT Z  &mt LALT X  &mt LGUI C      &kp V      &kp B                                        &kp N      &kp M      &as COMMA  &as DOT    &mt LSHIFT FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &ht LALT BSPC    &lm 1 LGUI          &trans              &lt 2 SPACE   &bootloader
         //                                 ╰──────────┴──────────╯                                 ╰──────────┴──────────╯
