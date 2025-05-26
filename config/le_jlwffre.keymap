@@ -40,7 +40,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <220>;
             require-prior-idle-ms = <125>;
-            bindings = <&kp>, <&lm 1>;
+            bindings = <&kp>, <&lm>;
         };
 
         mt: mod_tap {
@@ -174,7 +174,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp A      &kp S       &kp D      &kp F      &kp G                                        &kp H      &kp J      &kp K      &kp L     &kp ENTER     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &mt LSHIFT Z  &mt LALT X  &ht_mt C LGUI      &kp V      &kp B                                        &kp N      &kp M      &as COMMA  &as DOT    &mt LSHIFT FSLH
+            &mt LSHIFT Z  &mt LALT X  &ht_mt C 1 LGUI      &kp V      &kp B                                        &kp N      &kp M      &as COMMA  &as DOT    &mt LSHIFT FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &ht LALT BSPC    &lm 1 LGUI          &trans              &lt 2 SPACE   &bootloader
         //                                 ╰──────────┴──────────╯                                 ╰──────────┴──────────╯
