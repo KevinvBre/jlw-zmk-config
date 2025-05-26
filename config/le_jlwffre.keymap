@@ -64,7 +64,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <220>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <250>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -74,7 +74,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <220>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <250>;
             bindings = <&kp>, <&lm_skip_mod>;
         };
 
@@ -84,13 +84,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <220>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <250>;
             bindings = <&kp>, <&kp>;
         };
         as_ht: autoshift_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&shifted>, <&kp>;
             flavor = "tap-preferred";
         };
@@ -98,7 +98,7 @@
         b_ht: blocked_holdtap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&none>, <&kp>;
             flavor = "tap-preferred";
         };
@@ -110,7 +110,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <220>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <250>;
             bindings = <&kp>, <&lmdub>;
         };
 
