@@ -103,7 +103,8 @@
             flavor = "tap-preferred";
         };
 
-        // on
+
+
         ht_mt: ht_mt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -111,20 +112,20 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <220>;
             require-prior-idle-ms = <250>;
-            bindings = <&lmdub>,<&kp>;
+            bindings = <&kp>, <&test>;
         };
 
-        
     };
 
     macros {
 
-        lmdub: lmdub {
-            #binding-cells = <1>;
+        test: test {
+            #binding-cells = <0>;
             compatible = "zmk,behavior-macro-one-param";
-            bindings =             
-            <&macro_tap &lm 1 LGUI>;
+            bindings =               
+            <&macro_tap &lm 1 LALT>;    
         };
+
 
         lm_skip_mod: lm_skip_mod {
             #binding-cells = <1>;
@@ -175,6 +176,7 @@
               <&macro_param_1to2>,
               <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
         };
+
     };
 
     keymap {
@@ -186,9 +188,9 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp A      &kp S       &kp D      &kp F      &kp G                                        &kp H      &kp J      &kp K      &kp L     &kp ENTER     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &mt LSHIFT Z  &mt LALT X  &ht_mt C C    &kp V      &kp B                                        &kp N      &kp M      &as COMMA  &as DOT    &mt LSHIFT FSLH
+            &mt LSHIFT Z  &mt LALT X  &kp C    &kp V      &kp B                                        &kp N      &kp M      &as COMMA  &as DOT    &mt LSHIFT FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &ht LALT BSPC    &lm 1 LGUI          &trans              &lt 2 SPACE   &bootloader
+                                            &ht_mt LALT BSPC    &lm 1 LGUI          &trans              &lt 2 SPACE   &bootloader
         //                                 ╰──────────┴──────────╯                                 ╰──────────┴──────────╯
             >;            
         };
@@ -219,6 +221,21 @@
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                  ├──────────┼─────────────┼──────────┴─────────────┴──────────────────╯
                                              &kp BSPC   &kp LGUI        &trans          &none      &bootloader
         //                                 ╰──────────┴──────────╯                  ╰──────────┴─────────────╯
+            >;            
+        };
+
+
+        3 {
+            bindings = <
+        //╭─────────────────────┬─────────────────────┬───────────────────┬───────────┬──────────╮              ╭──────────┬──────────┬──────────┬───────────────────────────┬─────────────────────────╮
+            &htskip LC(LG(LS(N4))) ESC    &b_ht A W      &lm_skip_mod TAB   &trans     &trans                   &trans    &trans        &trans     &lm_skip_mod  C_VOL_DN      &lm_skip_mod C_VOL_UP
+        //├─────────────────────┼───────────────-─────┼───────────────────┼───────────┼──────────┤              ├──────────┼──────────┼──────────┼───────────────────────────┼─────────────────────────┤
+            &trans                        &trans           &as TAB          &trans       &trans                   &trans    &trans       &trans     &trans                      &trans
+        //├─────────────────────┼───────────────-─────┼───────────────────┼───────────┼──────────┤              ├──────────┼──────────┼──────────┼───────────────────────────┼─────────────────────────┤       
+            &trans                        &trans           &trans           &trans        &trans                     &trans    &trans      &trans     &trans                      &trans
+        //╰─────────────────────┴─────────────────────┴───────────────────┼───────────┼──────────┤              ├──────────┼──────────┼──────────┴───────────────────────────┴─────────────────────────╯
+                                                                            &trans       &none      &trans        &trans     &trans
+        //                                                                ╰───────────┴──────────╯              ╰──────────┴──────────╯
             >;            
         };
 
