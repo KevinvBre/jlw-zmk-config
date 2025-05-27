@@ -112,19 +112,21 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <220>;
             require-prior-idle-ms = <250>;
-            bindings = <&lm 1 LALT>, <&kp>;
+            bindings = <&test>, <&kp>;
         };
 
     };
 
     macros {
 
-        // test: test {
-        //     #binding-cells = <0>;
-        //     compatible = "zmk,behavior-macro";
-        //     bindings =               
-        //     <&macro_tap &lm 1 LALT>;    
-        // };
+        test: test {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =            
+            <&macro_press &lm 1 LALT>,
+            <&macro_pause_for_release>,
+            <&macro_release &lm 1 LALT>;   
+        };
 
 
         lm_skip_mod: lm_skip_mod {
