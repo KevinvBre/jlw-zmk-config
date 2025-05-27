@@ -123,7 +123,7 @@
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =               
-            <&macro_tap &lm 1 LALT>;    
+            <&macro_press &lm 1 LALT>;    
         };
 
 
@@ -219,7 +219,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                  ├──────────┼─────────────┼──────────┼─────────────┼──────────────────┤
             &kp LSFT    &kp X       &kp C     &kp V     &kp B                           &as MINUS  &as EQUAL    &trans      &trans         &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                  ├──────────┼─────────────┼──────────┴─────────────┴──────────────────╯
-                                             &kp BSPC   &kp LGUI        &trans          &none      &bootloader
+                                             &trans   &kp LGUI        &trans          &none      &bootloader
         //                                 ╰──────────┴──────────╯                  ╰──────────┴─────────────╯
             >;            
         };
