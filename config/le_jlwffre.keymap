@@ -49,10 +49,17 @@
                 bindings = <&kp RET>;
             };      
 
-            test5 {
+            // test5 {
+            //     timeout-ms = <50>;
+            //     require-prior-idle-ms = <250>;
+            //     key-positions = <21 22>;
+            //     bindings = <&kp LC(C) >;
+            // };
+
+             test6 {
                 timeout-ms = <50>;
                 require-prior-idle-ms = <250>;
-                key-positions = <21 22>;
+                key-positions = <22 23>;
                 bindings = <&kp LC(C) >;
             };       
         };
