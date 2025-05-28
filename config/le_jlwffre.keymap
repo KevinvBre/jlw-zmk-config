@@ -85,6 +85,8 @@
             bindings = <&kp>, <&lm_skip_mod>;
         };
 
+      
+
 
         mt: mod_tap {
             flavor = "hold-preferred";
@@ -145,6 +147,18 @@
             <&macro_press &kp LGUI>,
             <&macro_pause_for_release>,
             <&macro_release &kp LGUI>;
+        };
+
+        lms_alt: lms_alt {
+            #binding-cells = <1>;
+            compatible = "zmk,behavior-macro-one-param";
+            bindings =            
+            <&macro_release &kp LALT>,  
+            <&macro_param_1to1>,          
+            <&macro_tap &kp MACRO_PLACEHOLDER>,
+            <&macro_press &kp LALT>,
+            <&macro_pause_for_release>,
+            <&macro_release &kp LALT>;
         };
 
         lm: lm {
@@ -237,7 +251,7 @@
         3 {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮                  ╭──────────┬─────────────┬──────────┬─────────────┬──────────────────╮
-            &as N1     &as N2     &as N3     &as N4     &as N5                          &as BSLH   &none        &kp UP      &none          &studio_unlock
+            &lms_alt N1     &as N2     &as N3     &as N4     &as N5                          &as BSLH   &none        &kp UP      &none          &studio_unlock
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                  ├──────────┼─────────────┼──────────┼─────────────┼──────────────────┤
             &as N6     &as N7    &as N8      &as N9     &as N0                          &as APOS   &kp LEFT     &kp DOWN    &kp RIGHT      &as SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                  ├──────────┼─────────────┼──────────┼─────────────┼──────────────────┤
