@@ -95,8 +95,18 @@
             bindings =  <&kp>, <&lms_alt>;
         };
 
-      
+        htskipkeep: htkeepskip {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <220>;
+            require-prior-idle-ms = <250>;
+            bindings =   <&lms_alt>,<&kp>;
+        };
 
+ 
+      
 
         mt: mod_tap {
             flavor = "hold-preferred";
@@ -261,7 +271,7 @@
         3 {
             bindings = <
         //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮                          ╭──────────┬─────────────┬──────────┬─────────────┬──────────────────╮
-            &lms_alt N1     &lms_alt N2     &lms_alt N3      &htkeepskip R N4     &lms_alt N5                                &as BSLH   &none        &kp UP      &none          &studio_unlock
+            &lms_alt N1     &htskipkeep W N2     &lms_alt N3      &htkeepskip R N4     &lms_alt N5                                &as BSLH   &none        &kp UP      &none          &studio_unlock
         //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                          ├──────────┼─────────────┼──────────┼─────────────┼──────────────────┤
             &lms_alt N6     &lms_alt N7     &lms_alt N8      &lms_alt N9     &lms_alt N0                                &as APOS   &kp LEFT     &kp DOWN    &kp RIGHT      &as SEMI
         //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                          ├──────────┼─────────────┼──────────┼─────────────┼──────────────────┤
