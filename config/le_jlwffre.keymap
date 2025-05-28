@@ -102,11 +102,10 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <220>;
             require-prior-idle-ms = <250>;
-            bindings =   <&lms_alt>,<&kp>;
+            bindings = <&lms_alt>, <&kp>;
         };
 
  
-      
 
         mt: mod_tap {
             flavor = "hold-preferred";
