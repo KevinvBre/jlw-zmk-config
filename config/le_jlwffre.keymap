@@ -118,14 +118,14 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <220>;
             require-prior-idle-ms = <250>;
-            bindings = <&alt-lm>, <&kp>;
+            bindings = <&altlm>, <&kp>;
         };
 
     };
 
     macros {
 
-        alt-lm: alt-lm {
+        altlm: altlm {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =            
