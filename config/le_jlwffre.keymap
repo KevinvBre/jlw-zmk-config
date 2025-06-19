@@ -95,9 +95,6 @@
             bindings =  <&kp>, <&lms_alt>;
         };
 
-
-      
-
         mt: mod_tap {
             flavor = "hold-preferred";
             #binding-cells = <2>;
@@ -222,7 +219,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp A      &kp S       &kp D      &kp F      &kp G                                        &kp H      &kp J      &kp K      &kp L     &kp ENTER     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &mt LSHIFT Z &mt LALT X  &kp C    &kp V      &kp B                                        &kp N      &kp M      &as COMMA  &as DOT    &mt LSHIFT FSLH
+            &mt LSHIFT Z &ht_mt X X  &kp C    &kp V      &kp B                                        &kp N      &kp M      &as COMMA  &as DOT    &mt LSHIFT FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &ht_mt BSPC BSPC    &lm 1 LGUI          &trans              &lt 2 SPACE   &bootloader
         //                                 ╰──────────┴──────────╯                                 ╰──────────┴──────────╯
