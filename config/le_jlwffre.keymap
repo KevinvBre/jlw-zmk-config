@@ -130,6 +130,7 @@
             bindings = <&altlm>, <&kp>;
         };
 
+
         ht-alt: ht-alt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -273,11 +274,11 @@
         3 {
             bindings = <
         //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮                          ╭──────────┬─────────────┬──────────┬─────────────┬──────────────────╮
-            &ht-alt N1 N1    &ht-alt N2  N2   &ht-alt N3  N3    &ht-alt N4  N4   &ht-alt N5   N5                        &none       &none       &none      &none          &none
+            &lms_alt N1     &lms_alt N2     &lms_alt N3      &htkeepskip R N4     &lms_alt N5                           &none       &none       &none      &none          &none
         //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                          ├──────────┼─────────────┼──────────┼─────────────┼──────────────────┤
-            &ht-alt N6 N6     &ht-alt N7 N7    &ht-alt N8 N8     &ht-alt N9  N9     &ht-alt N0 N0                               &none       &none       &none      &none          &none
+            &lms_alt N6     &lms_alt N7     &lms_alt N8      &lms_alt N9     &lms_alt N0                                &none       &none       &none      &none          &none
         //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                          ├──────────┼─────────────┼──────────┼─────────────┼──────────────────┤
-            &kp LSFT        &lms_alt X      &ht-alt C            &kp V           &kp B                                 &none       &none       &none      &none          &none
+            &kp LSFT        &lms_alt X      &lms_alt C            &kp V           &kp B                                 &none       &none       &none      &none          &none
         //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┤                          ├──────────┼─────────────┼──────────┴─────────────┴──────────────────╯
                                                              &trans          &kp LGUI             &none                &none      &none
         //                                                ╰───────────────┴───────────────╯                          ╰──────────┴─────────────╯
