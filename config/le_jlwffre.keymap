@@ -130,7 +130,6 @@
             bindings = <&altlm>, <&kp>;
         };
 
-
         ht-alt: ht-alt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
