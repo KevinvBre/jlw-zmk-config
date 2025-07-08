@@ -262,9 +262,9 @@
         3 {
             bindings = <
         //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮                          ╭──────────┬─────────────┬──────────┬─────────────┬──────────────────╮
-            &htkeepskip N1     &htkeepskip N2     &htkeepskip N3      &htkeepskip R N4     &htkeepskip N5                           &none       &none       &none      &none          &none
+            &htkeepskip Q N1     &htkeepskip W N2     &htkeepskip E N3      &htkeepskip R N4     &htkeepskip T N5                           &none       &none       &none      &none          &none
         //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                          ├──────────┼─────────────┼──────────┼─────────────┼──────────────────┤
-            &htkeepskip N6     &htkeepskip N7     &htkeepskip N8      &htkeepskip N9     &htkeepskip N0                                &none       &none       &none      &none          &none
+            &htkeepskip A N6     &htkeepskip S N7     &htkeepskip D N8      &htkeepskip F N9     &htkeepskip G N0                                &none       &none       &none      &none          &none
         //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                          ├──────────┼─────────────┼──────────┼─────────────┼──────────────────┤
             &kp LSFT            &none            &none            &none          &none                                  &none       &none       &none      &none          &none
         //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┤                          ├──────────┼─────────────┼──────────┴─────────────┴──────────────────╯
