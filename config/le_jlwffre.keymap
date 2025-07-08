@@ -252,9 +252,9 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                  ├──────────┼─────────────┼──────────┼─────────────┼──────────────────┤
             &as N6     &as N7    &as N8      &as N9     &as N0                          &as APOS   &kp LEFT     &kp DOWN    &kp RIGHT      &as SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                  ├──────────┼─────────────┼──────────┼─────────────┼──────────────────┤
-            &kp LSFT    &kp X       &kp C     &kp V     &kp B                           &as MINUS  &as EQUAL    &trans      &trans         &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                  ├──────────┼─────────────┼──────────┴─────────────┴──────────────────╯
-                                             &trans     &kp LGUI        &none             &trans     &bootloader
+            &kp LSFT    &kp X       &kp C     &kp V     &kp B                           &as MINUS  &as EQUAL    &trans      &trans         &trans
+                                             &trans     &kp LGUI        &none           &kp SPACE     &none
         //                                 ╰──────────┴──────────╯                  ╰──────────┴─────────────╯
             >;            
         };
@@ -262,9 +262,9 @@
         3 {
             bindings = <
         //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮                          ╭──────────┬─────────────┬──────────┬─────────────┬──────────────────╮
-            &htkeepskip Q N1     &htkeepskip W N2     &htkeepskip E N3      &htkeepskip R N4     &htkeepskip T N5                           &none       &none       &none      &none          &none
+            &htkeepskip Q N1     &htkeepskip W N2     &htkeepskip E N3      &htkeepskip R N4     &htkeepskip T N5      &none       &none       &kp UP      &none          &none
         //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                          ├──────────┼─────────────┼──────────┼─────────────┼──────────────────┤
-            &htkeepskip A N6     &htkeepskip S N7     &htkeepskip D N8      &htkeepskip F N9     &htkeepskip G N0                                &none       &none       &none      &none          &none
+            &htkeepskip A N6     &htkeepskip S N7     &htkeepskip D N8      &htkeepskip F N9     &htkeepskip G N0      &none       &kp LEFT     &kp DOWN    &kp RIGHT        &none
         //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                          ├──────────┼─────────────┼──────────┼─────────────┼──────────────────┤
             &kp LSFT            &none            &none            &none          &none                                  &none       &none       &none      &none          &none
         //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┤                          ├──────────┼─────────────┼──────────┴─────────────┴──────────────────╯
