@@ -88,11 +88,11 @@
         htkeepskip: htkeepskip {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <220>;
-            require-prior-idle-ms = <250>;
-            bindings =  <&kp>, <&lms_alt>;
+            require-prior-idle-ms = <100>;
+            bindings =  <&none>, <&lms_alt>;
         };
 
         mt: mod_tap {
@@ -124,9 +124,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <190>;
             quick-tap-ms = <220>;
-            require-prior-idle-ms = <250>;
+            require-prior-idle-ms = <10>;
             bindings = <&altlm>, <&kp>;
         };
 
