@@ -27,7 +27,7 @@
                 timeout-ms = <50>;
                 require-prior-idle-ms = <250>;
                 key-positions = <1 2>;
-                bindings = <&as LBKT>;
+                bindings = <&as RBKT>;
             }; 
             test2 {
                 timeout-ms = <50>;
@@ -39,7 +39,7 @@
                 timeout-ms = <50>;
                 require-prior-idle-ms = <250>;
                 key-positions = <11 12>;
-                bindings = <&as RBKT>;
+                bindings = <&as LBKT>;
             };      
 
             test4 {
