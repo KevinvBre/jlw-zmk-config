@@ -17,47 +17,38 @@
             compatible = "zmk,combos";
 
             test0 {
-                timeout-ms = <50>;
+                timeout-ms = <25>;
                 require-prior-idle-ms = <250>;
                 key-positions = <0 1>;
                 bindings = <&soft_off>;
             }; 
 
             test1 {
-                timeout-ms = <50>;
+                timeout-ms = <25>;
                 require-prior-idle-ms = <250>;
                 key-positions = <1 2>;
                 bindings = <&as RBKT>;
             }; 
             test2 {
-                timeout-ms = <50>;
+                timeout-ms = <25>;
                 require-prior-idle-ms = <250>;
                 key-positions = <2 3>;
                 bindings = <&kp LS(RET)>;
             };     
             test3 {
-                timeout-ms = <50>;
+                timeout-ms = <25>;
                 require-prior-idle-ms = <250>;
                 key-positions = <11 12>;
                 bindings = <&as LBKT>;
             };      
-
             test4 {
-                timeout-ms = <50>;
+                timeout-ms = <25>;
                 require-prior-idle-ms = <250>;
                 key-positions = <12 13>;
                 bindings = <&kp RET>;
             };      
-
-            // test5 {
-            //     timeout-ms = <50>;
-            //     require-prior-idle-ms = <250>;
-            //     key-positions = <21 22>;
-            //     bindings = <&kp LC(C) >;
-            // };
-
              test6 {
-                timeout-ms = <50>;
+                timeout-ms = <25>;
                 require-prior-idle-ms = <250>;
                 key-positions = <22 23>;
                 bindings = <&kp LC(C) >;
