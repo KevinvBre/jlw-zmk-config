@@ -91,6 +91,15 @@
 
     macros {
 
+        claude: claude {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_tap &kp SPACE>,
+                       <&macro_release &kp LALT>;
+        };
+
+
         altlm: altlm {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
@@ -178,7 +187,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &mt LSHIFT Z &ht_mt X X  &kp C    &kp V      &kp B                                        &kp N      &kp M      &as COMMA  &as DOT    &mt LSHIFT FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                                 ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &ht_mt BSPC BSPC    &lm 1 LGUI          &none              &lt 2 SPACE   &bootloader
+                                            &ht_mt BSPC BSPC    &lm 1 LGUI          &none              &lt 2 SPACE   &claude
         //                                 ╰──────────┴──────────╯                                 ╰──────────┴──────────╯
             >;            
         };
@@ -203,14 +212,14 @@
         2 {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮                  ╭──────────┬─────────────┬──────────┬─────────────┬──────────────────╮
-            &as N1     &as N2     &as N3     &as N4     &as N5                          &as BSLH   &none        &kp UP      &none          &studio_unlock
+            &as N1     &as N2     &as N3     &as N4     &as N5                          &as BSLH   &none        &kp UP      &none          &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                  ├──────────┼─────────────┼──────────┼─────────────┼──────────────────┤
             &as N6     &as N7    &as N8      &as N9     &as N0                          &as APOS   &kp LEFT     &kp DOWN    &kp RIGHT      &as SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                  ├──────────┼─────────────┼──────────┼─────────────┼──────────────────┤
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤                  ├──────────┼─────────────┼──────────┴─────────────┴──────────────────╯
             &kp LSFT    &kp X       &kp C     &kp V     &kp B                           &as MINUS  &as EQUAL    &trans      &trans         &trans
             
-                                             &trans     &kp LGUI        &none           &kp SPACE     &none
+                                             &trans     &kp LGUI        &none           &kp SPACE     &bootloader
         //                                 ╰──────────┴──────────╯                  ╰──────────┴─────────────╯
             >;            
         };
