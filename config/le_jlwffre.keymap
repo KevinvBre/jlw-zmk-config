@@ -134,6 +134,7 @@
             // <&macro_release &kp LALT>;
         };
 
+      
         lm: lm {
             compatible = "zmk,behavior-macro-two-param";
             wait-ms = <0>;
